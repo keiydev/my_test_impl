@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_corner_background"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/topPanelPaddingLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffeeeeee"
+        android:orientation="vertical"
+        android:paddingStart="3dip"
+        android:paddingEnd="1dip">
+
+        <LinearLayout android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout android:id="@+id/title_template"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dip"
+                android:layout_marginEnd="10dip">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    style="?android:attr/textAppearanceLarge"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAlignment="gravity"
+                    android:gravity="center_vertical"
+                    android:text="Title" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#ffeeeeee" />
+
+    <LinearLayout android:id="@+id/middlePanelPaddingLayer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/dialog_corner_background"
+        android:orientation="vertical"
+        android:paddingStart="3dip"
+        android:paddingEnd="1dip">
+
+        <LinearLayout android:id="@+id/contentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ScrollView android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dip"
+                android:paddingBottom="12dip"
+                android:paddingStart="14dip"
+                android:paddingEnd="10dip"
+                android:overScrollMode="ifContentScrolls">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/message"
+                        style="?android:attr/textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is dialog message.\nPlease read this message.\nThank you."
+                        android:textColor="@color/black"
+                        android:padding="5dip" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pixel6a_color_01" />
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="don't show again"
+                        android:buttonTint="@color/black"
+                        android:theme="@style/MyButton"
+                        />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#ffeeeeee" />
+
+    <Button android:id="@+id/button_ok"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:theme="@style/MyButton"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textColor="@color/black"
+        android:text="@android:string/ok"
+        style="?android:attr/textAppearanceMedium"
+        android:padding="0dp"
+        android:layout_margin="0dp" />
+
+</LinearLayout>

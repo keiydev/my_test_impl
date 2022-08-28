@@ -2,6 +2,7 @@ package com.example.mytestimpl;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -20,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showDialogFragment() {
         SharedPreferences prefs = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
-        boolean notice_dialog_confirmed = prefs.getBoolean("notice_dialog_confirmed", false);
-        if (!notice_dialog_confirmed) {
+        boolean noticeDialogConfirmed = prefs.getBoolean("notice_dialog_confirmed", false);
+        if (!noticeDialogConfirmed) {
             MyDialogFragment myDialogFragment = new MyDialogFragment();
             myDialogFragment.show(getFragmentManager(), "dialog");
         } else {

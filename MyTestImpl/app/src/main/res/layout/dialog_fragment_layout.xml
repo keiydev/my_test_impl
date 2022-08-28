@@ -111,6 +111,8 @@
         android:text="@android:string/ok"
         style="?android:attr/textAppearanceMedium"
         android:padding="0dp"
+        android:background="#ffeeeeee"
+        android:foreground="?android:selectableItemBackground"
         android:layout_margin="0dp" />
 
 </LinearLayout>

@@ -24,7 +24,7 @@ public class MyDialogFragment extends DialogFragment {
       final View customView = inflater.inflate(R.layout.dialog_fragment_layout, null);
       customView.findViewById(R.id.button_ok).setOnClickListener(l -> {
          Log.d(TAG, "button_ok onClick called, isChecked = " + mCheckBox.isChecked());
-         dialogConfirmed(getContext(), mCheckBox.isChecked());
+         dialogConfirmed(mCheckBox.isChecked());
          dismiss();
       });
       mCheckBox = customView.findViewById(R.id.checkbox);
@@ -35,7 +35,8 @@ public class MyDialogFragment extends DialogFragment {
       return dialog;
    }
 
-   public void dialogConfirmed(Context context, boolean isChecked) {
+   public void dialogConfirmed(boolean isChecked) {
+      Context context = getContext();
       if (isChecked) {
          SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
          SharedPreferences.Editor editor = prefs.edit();

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyTcomTest</string>
+
+    <string name="button_accept">Accept</string>
+    <string name="button_refuse">Refuse</string>
+    <string name="button_end">End</string>
+
+</resources>
